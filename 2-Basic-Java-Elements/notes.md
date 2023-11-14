@@ -89,9 +89,7 @@ _Note: `var` is not a keyword, because `var var = "hello"` is converted to `Stri
 
 `throws`, `catch` and `throw` - perform exception handling
 
-These are the only keywords included in the exam.
-
-## Comments
+These are the only keywords included in the exam
 
 ## Importing packages
 
@@ -125,7 +123,108 @@ To refer to a class from another package, you need to use its 'fully qualified c
 Instead of doing this every time, you can use an import statement. 
 You can use as many as you like, and all they do is create a shortcut way to access those classes.
 
-`java.lang.package` is automatically imported every time.
+Some facts about importing packages:
+- `java.lang.package` is automatically imported every time.
+- There are no subpackages, you can't access com.amazon.books.ClassName by doing com.amazon.*
+- If there is no package with the name you specify in the classpath, the compiler will raise an error.
+- You can't import default packages / unpackaged classes.
+- If you want to import two classes with the same class name, you will have to use FQCN to refer to them.
+  - You can import one of them and use FQCN for the other.
+- `import static` exists but is not recommended (not on the exam, not used in professional contexts)
+
+
+
+## Structure of a Java class
+
+### Class means...
+1. in OOP, an abstraction of an entity
+2. the code in a java source file (.java file)
+3. the output of the java compiler (.class file)
+
+### Structure of a java source file 
+1. package statement (0-1)
+2. import statements (0+)
+3. type declarations (0+)
+
+The order is important, and all 3 parts are optional.
+
+### Members of a class 
+
+Within a class definition, you can have the following **members**...
+- field declarations
+- methods
+- constructors
+- initializers
+- and also... (not important for this exam)
+  - annotations
+  - classes
+  - interfaces
+  - enums
+
+Members can be...
+- static
+- non-static aka instance
+
+## Comments
+
+```java
+// comment 
+
+/* 
+multi
+line
+comment 
+*/
+```
+### JavaDoc comments
+If you write comments in this format, you can easily convert them into HTML documentation for your code.
+
+Here's an example of a Javadoc comment for a simple Java method:
+
+```java
+/**
+* This method calculates the square of a given number.
+*
+* @param number The input number for which the square will be calculated.
+* @return The square of the input number.
+  */
+  public int calculateSquare(int number) {
+  return number * number;
+  }
+```
+
+  In this example:
+
+- The /** at the beginning indicates the start of a Javadoc comment block.
+- The description provides a brief explanation of what the method does.
+- @param is used to document the parameters of the method, specifying their names and descriptions.
+- @return documents the value that the method returns. 
+
+When the Javadoc tool processes this, it generates documentation that includes this information, making it easy for other developers to understand how to use the calculateSquare method.
+See javadocs folder for chatGPT's example of a class using javadocs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Describe java.lang package
+
+
 
