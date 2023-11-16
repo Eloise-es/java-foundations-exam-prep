@@ -28,3 +28,6 @@ replay_pid*
 
 # mac files
 .DS_Store
+
+# javadoc files
+doc
