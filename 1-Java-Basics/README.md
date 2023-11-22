@@ -1,22 +1,29 @@
-## Java Basics
+# Java Basics
+
+## Exam aims
+
 - JDK
 - JRE
 - components of a Java program
 - compile and execute a java program
 - object-oriented programming
 
-### JDK
-#### Java Development Kit 
+## JDK
+
+### Java Development Kit
+
 = big one, includes tools like debugger and compiler + JRE
 
+## JRE
 
-### JRE
-#### Java Runtime Environment 
+### Java Runtime Environment
+
 = just what is needed to run a Java program (standard classes, config, extension files)
 
-### Components
+## Components
+
 - Source code files
-  -  These contain one or more type definitions
+  - These contain one or more type definitions
 - Java standard library classes
   - Pre-compiled, accessible by any Java program
 - Third party libraries
@@ -28,7 +35,8 @@
 
 A class definition can contain `public`, `extends`, `implements` or none of these.
 
-### Compile + execute
+## Compile + execute
+
 Step 1: `javac NameOfFile.java`
 
 Step 2: `java NameOfFile.java`
@@ -37,54 +45,63 @@ Or, since Java 11, in just one step:
 
 `java NameOfFile.java`
 
-### Main method
+## Main method
 
 There has to always be a main method, and it's always the first thing to run.
 Looks like this:
+
 ```java
 public static void main(String[] args) {}
 ```
 
 Or like this:
+
 ```java
 public static void main(String... args) {}
 ```
 
 Or like this:
+
 ```java
 public static void main(String args[]) throws Exception { throw new Exception(); }
 ```
 
-### Command line args
+## Command line args
+
 Specify them like this: `java NameOfProgram a b c`
 
 They are passed to the main method as strings. In this case, the String array 'args' would contain `["a", "b", "c"]`
 
 If there are no args, args is not null, it is a String array of length 0
 
-## Object-Oriented Programming (OOP)
+# Object-Oriented Programming (OOP)
 
 Objects are modelled using classes. Their behaviour is modelled as methods on those classes.
 
 OOP is the opposite of Procedural Programming
 
-#### Abstraction
+## Abstraction
+
 - capturing relevant details (defining the concept)
 
-#### Encapsulation
+## Encapsulation
+
 - hiding implementation details of an entity (show what, not how)
 - Data members of a class are declared private, methods are declared public.
 
-#### Inheritance
+## Inheritance
+
 - Creating specialised entities by extending existing entities
 - e.g. SportsCar extends Car
 
-#### Polymorphism 
+## Polymorphism
+
 - same entity has different behaviour depending on context
 - direct consequence of inheritance (SportsCar is counted as Car, but behaves differently)
 
+# OOP in Java
 
-### Describing behaviour
+## Describing behaviour
 
 We can use one behaviour on a range of objects, e.g. "Switchable" for Car, Fan, LightBulb. In every case we can switch the thing on or off, but each one does this differently.
 
@@ -94,7 +111,9 @@ interface Switchable{
     void off();
 }
 ```
+
 Use `implements` to define the behaviour per class:
+
 ```java
 class Fan implements Switchable {
     boolean on;
@@ -108,17 +127,19 @@ class Fan implements Switchable {
   }
 }
 ```
+
 We abstract out the behaviour to interfaces.
 
-### Creating objects
+## Creating objects
 
 ```java
 Car car1 = new Car();
 ```
 
-### Making objects interact
+## Making objects interact
 
 See example below of how objects call each other's methods and access each other's data:
+
 ```java
 class MyApp{
     public static void main(String[] args){
@@ -129,7 +150,8 @@ class MyApp{
     }
 }
 ```
-### Relation between Class, Object and Reference
+
+## Relation between Class, Object and Reference
 
 class = template to make objects with
 
@@ -137,11 +159,11 @@ object = instance of a class
 
 reference = the address of the object in memory (can be more than one pointing to the same object)
 
-A reference variable not pointing to anything is `null`. A primitive variable cannot be null. 
+A reference variable not pointing to anything is `null`. A primitive variable cannot be null.
 
-### Using static and instance
+## Using static and instance
 
-Functions can't live alone outside a class, but sometimes we want just one function rather than individual ones for each object. To get around this, we use `static` to say that the method applies to the class rather than just an instance of the class. Then we don't have to use `new` anywhere, we can just call the function. 
+Functions can't live alone outside a class, but sometimes we want just one function rather than individual ones for each object. To get around this, we use `static` to say that the method applies to the class rather than just an instance of the class. Then we don't have to use `new` anywhere, we can just call the function.
 
 "Static variables" are also called "class variables" because they stay with the class, not each object.
 
@@ -155,7 +177,7 @@ The opposite of static is instance, but it has no keyword as it's the default.
 4. violated OOP principles:
    - abstraction - only one class that does everything, no concept defined to create entities with
    - encapsulation - all the how is visible in the one class
-   - inheritance and polymorphism not used 
+   - inheritance and polymorphism not used
 5. encapsulation controls functionality by hiding the way things are done and making parts compatible, not dependent
 6. information hiding - tries to hide the behind the scenes way things work, focus is on the data you retrieve and actions you can do - hidden parts are the inside workings of functions.
 7. Aggregation relies on sets of data, but with inheritance things are less dependent on each other and exist as seperate instances
