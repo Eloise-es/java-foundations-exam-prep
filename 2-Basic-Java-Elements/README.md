@@ -274,7 +274,7 @@ For the others, you have to import them, and you should avoid using the wildcard
 | Package       | Description                                      | Most Used Classes                                                                          |
 |---------------|--------------------------------------------------|--------------------------------------------------------------------------------------------|
 | `java.lang`   | Basic functionalities, such as Object and System | `Object`, `String`, `System`, `Math`, `StringBuilder`, `RuntimeException`, wrapper classes |
-| `java.util`   | General utilities for data structures            | `Set`, `Map`, `Date`, `ArrayList`, `HashMap`, `List`, `Collection`                          |
+| `java.util`   | General utilities for data structures            | `Set`, `Map`, `Date`, `ArrayList`, `HashMap`, `List`, `Collection`                         |
 | `java.io`     | Input/output functionalities                     | `FileInputStream`, `FileOutputStream`, `PrintWriter`, `BufferedReader`                     |
 | `java.net`    | Networking functionalities                       | `URL`, `Socket`, `HttpURLConnection`, `InetAddress`                                        |
 | `java.awt`    | Abstract windowing toolkit for creating GUIs     | `Frame`, `Button`, `TextField`, `Label`, `Checkbox`                                        |
