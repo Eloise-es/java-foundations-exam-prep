@@ -4,6 +4,7 @@ class MyFirstJavaProgram {
         double d = 3.4;
         double d2 = 10.11;
         System.out.println("Hello world!");
+        System.out.println(i / 0);
         System.out.println(d / 0);
         System.out.println(d2 % 0);
         System.out.println(Double.POSITIVE_INFINITY);
